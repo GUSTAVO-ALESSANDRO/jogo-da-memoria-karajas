@@ -1,0 +1,32 @@
+.info {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  margin-bottom:12px;
+}
+.board {
+  display:grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap:10px;
+  background: transparent;
+}
+.topBar {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:12px;
+  gap:12px;
+}
+.score {
+  font-size:18px;
+  font-weight:700;
+  color:var(--accent);
+}
+.hint { color:var(--muted); margin-top:10px; font-size:13px; }
+@media (max-width:900px){
+  .board { grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width:480px){
+  .board { grid-template-columns: repeat(3, 1fr); gap:8px; }
+}

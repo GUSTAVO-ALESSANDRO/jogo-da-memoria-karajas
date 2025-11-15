@@ -1,0 +1,10 @@
+.box {
+  background:var(--card);
+  padding:18px;
+  border-radius:12px;
+  text-align:center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+.box h2 { margin:0 0 8px 0; color:var(--accent) }
+.box p { color:var(--muted) }
+.actions { margin-top:14px }

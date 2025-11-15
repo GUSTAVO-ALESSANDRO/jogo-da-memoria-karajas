@@ -1,0 +1,17 @@
+.home { display:flex; justify-content:center; }
+.card {
+  display:flex;
+  gap:20px;
+  align-items:center;
+  background:var(--card);
+  padding:18px;
+  border-radius:12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+.left { width:280px; flex-shrink:0; }
+.cover { width:100%; height:160px; object-fit:cover; border-radius:8px; }
+.right { max-width:640px; }
+.right h2 { margin:0 0 8px 0; color:var(--accent); }
+.right p { color:var(--muted); line-height:1.4; }
+.note { margin-top:8px; font-style:italic; font-size:13px; color:#444; }
+.actions { margin-top:14px; }

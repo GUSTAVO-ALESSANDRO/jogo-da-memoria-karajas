@@ -1,0 +1,44 @@
+.header {
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  margin-bottom: 18px;
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.titleSection {
+  flex: 1;
+}
+
+.title {
+  margin:0;
+  font-size:24px;
+  color:var(--accent);
+}
+.subtitle {
+  margin:4px 0 0 0;
+  color:var(--muted);
+  font-size:14px;
+}
+
+.backButton {
+  flex-shrink: 0;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+
+.backButton:hover {
+  opacity: 0.9;
+}
