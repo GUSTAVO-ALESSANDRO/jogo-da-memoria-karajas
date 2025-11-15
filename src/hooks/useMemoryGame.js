@@ -33,7 +33,9 @@ export default function useMemoryGame({ pairsCount = 18, maxAttempts = 50, onEnd
     let uid = 1
     for (const c of escolhidas) {
       const frontType = c.type === 'image' ? 'image' : 'text'
-      const frontText = frontType === 'image' ? c.image : c.title
+      // Para cartas do tipo 'image' o nome do arquivo está em `description`
+      const frontText = frontType === 'image' ? (c.description || '') : c.title
+      // Para cartas de texto mantemos a descrição longa em frontExtra
       const frontExtra = frontType === 'text' ? (c.description || '') : ''
       const cardA = {
         uid: uid++,

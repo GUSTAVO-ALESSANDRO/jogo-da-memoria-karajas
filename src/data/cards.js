@@ -204,61 +204,61 @@ const CARDS = [
     "id": 31,
     "type": "image",
     "title": "Hetohoky - Casa Grande",
-    "description": "hetohoky.png"
+    "description": "hetohoky.webp"
   },
   {
     "id": 32,
     "type": "image",
-    "title": "Boneca Ritxoko",
-    "description": "ritxoko.png"
+    "title": "Boneca Ritxoko/Karajá",
+    "description": "ritxoko.webp"
   },
   {
     "id": 33,
     "type": "image",
     "title": "Pintura Facial Omarura",
-    "description": "pintura-omarura.png"
+    "description": "pintura-omarura.webp"
   },
   {
     "id": 34,
     "type": "image",
     "title": "Rio Araguaia",
-    "description": "rio-araguaia.png"
+    "description": "rio-araguaia.jpg"
   },
   {
     "id": 35,
     "type": "image",
     "title": "Aldeia Karajá",
-    "description": "aldeia-karaja.png"
+    "description": "aldeia-karaja.jpg"
   },
   {
     "id": 36,
     "type": "image",
     "title": "Cocar Plumário",
-    "description": "cocar-plumario.png"
+    "description": "cocar-plumario.jpg"
   },
   {
     "id": 37,
     "type": "image",
     "title": "Cerâmica Karajá",
-    "description": "ceramica-karaja.png"
+    "description": "ceramica-karaja.jpg"
   },
   {
     "id": 38,
     "type": "image",
     "title": "Máscara Aruanã",
-    "description": "mascara-aruana.png"
+    "description": "mascara-aruana.jpeg"
   },
   {
     "id": 39,
     "type": "image",
     "title": "Cestaria Tradicional",
-    "description": "cestaria-karaja.png"
+    "description": "cestaria-karaja.webp"
   },
   {
     "id": 40,
     "type": "image",
     "title": "Pescaria Tradicional",
-    "description": "pescaria.png"
+    "description": "pescaria.webp"
   }
 ]
 

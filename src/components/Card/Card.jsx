@@ -11,6 +11,7 @@
 import React from 'react'
 import styles from './Card.module.css'
 import cover from '../../assets/fundo-do-card.png'
+import images from '../../data/images'
 
 export default function Card({ data, onClick, index }) {
   // Verifica se a carta deve estar virada para cima
@@ -20,6 +21,16 @@ export default function Card({ data, onClick, index }) {
   // Se a carta foi removida (par encontrado), retorna um elemento vazio
   if (data.removed) {
     return <div className={styles.empty} />
+  }
+
+  // Resolve a URL da imagem usando o mapa `src/data/images.js`.
+  // Esse mapa garante que o bundler (Vite) inclua as imagens no build e gere URLs corretas.
+  let imageSrc = null
+  let publicUrl = null
+  if (data.frontType === 'image' && data.frontText) {
+    imageSrc = images[data.frontText] || null
+    // Fallback para public/ (se o arquivo estiver em public/ em vez de src/data)
+    publicUrl = `/${data.frontText}`
   }
 
   return (
@@ -45,15 +56,18 @@ export default function Card({ data, onClick, index }) {
               
               {/* Renderiza a frente da carta baseado no tipo (imagem ou texto) */}
               {data.frontType === 'image' ? (
-                <>
-                  {/* Se for imagem, exibe a imagem */}
-                  <img src={`/${data.frontText}`} alt={data.title || ''} className={styles.frontImg} />
-                </>
+                // Se for imagem, tenta `src/data/...` (imageSrc). Se der erro, troca para `/nome` (publicUrl).
+                <img
+                  src={imageSrc || publicUrl}
+                  alt={data.title || ''}
+                  className={styles.frontImg}
+                  onError={(e) => {
+                    if (publicUrl && e.target.src !== publicUrl) e.target.src = publicUrl
+                  }}
+                />
               ) : (
-                <>
-                  {/* Se for texto, exibe a descrição */}
-                  <div className={styles.cardDescription}>{data.frontExtra || ''}</div>
-                </>
+                // Se for texto, exibe a descrição longa
+                <div className={styles.cardDescription}>{data.frontExtra || ''}</div>
               )}
             </div>
           </div>
