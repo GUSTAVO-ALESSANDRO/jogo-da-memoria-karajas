@@ -67,6 +67,7 @@ Basta abrir o projeto em qualquer navegador moderno. O jogo funciona de maneira 
    ```
 
 **Acesse a pasta do projeto**
+
     ```
     cd jogo-da-memoria-karajas
     ```
