@@ -49,12 +49,13 @@
   margin: 0 0 16px 0;
   color: var(--accent);
   font-size: 22px;
+  text-align: justify; /* MODIFICADO: Texto justificado */
 }
 
 .modalImage {
   width: 100%;
   max-height: 300px;
-  object-fit: cover;
+  object-fit: contain; /* MODIFICADO: Evita o corte */
   border-radius: 8px;
   margin-bottom: 16px;
   background: #f0f0f0;
@@ -65,4 +66,5 @@
   color: #333;
   line-height: 1.6;
   margin: 0;
+  text-align: justify; /* Texto justificado (já estava) */
 }

@@ -61,23 +61,27 @@
   display:flex; 
   flex-direction:column; 
   align-items:center; 
-  justify-content:center; 
+  justify-content:center; /* Alinha o conteúdo ao topo */
   text-align:center; 
-  padding:2px;
+  padding:8px; /* Aumentei o padding */
   width:100%;
   height:100%;
+  gap: 6px; /* Espaço entre título e imagem */
 }
 
 .frontImg { 
   width:100%; 
-  height:100%; 
-  object-fit:cover; 
+  /* MODIFICADO: Remove height: 100% e usa flex para preencher o espaço */
+  flex: 1; /* Faz a imagem ocupar o espaço restante */
+  min-height: 0; /* Correção de flexbox para imagens */
+  object-fit: contain; /* MODIFICADO: Evita o corte */
   border-radius:0;
+  background: #f9f9f9; /* Fundo para imagens 'contain' */
 }
 
 .cardTitle {
   width:100%;
-  text-align:left;
+  text-align: center; /* MODIFICADO: Texto centralizado */
   padding:6px 8px;
   font-weight:700;
   color:var(--accent);
@@ -85,7 +89,8 @@
   background: rgba(255,255,255,0.85);
   align-self:flex-start;
   border-radius:4px;
-  margin-bottom:8px;
+  margin-bottom: 0; /* MODIFICADO: Removido margin, usando 'gap' no container */
+  flex-shrink: 0; /* Impede que o título encolha */
 }
 
 .cardDescription {
