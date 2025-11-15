@@ -66,8 +66,9 @@ export default function Card({ data, onClick, index }) {
                   }}
                 />
               ) : (
-                // Se for texto, exibe a descrição longa
-                <div className={styles.cardDescription}>{data.frontExtra || ''}</div>
+                // MODIFICADO: Se for texto, não exibe mais a descrição longa.
+                // O título já foi renderizado acima.
+                null
               )}
             </div>
           </div>
