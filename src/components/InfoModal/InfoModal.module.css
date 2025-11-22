@@ -26,9 +26,9 @@
 
 .closeButton {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  background: #eee;
+  top: 15px; /* MODIFICADO: Aumentei de 10px para 15px */
+  right: 15px; /* MODIFICADO: Aumentei de 10px para 15px */
+  /* background: #eee; */
   border: none;
   border-radius: 50%;
   width: 30px;
@@ -39,6 +39,7 @@
   cursor: pointer;
   line-height: 28px;
   text-align: center;
+  z-index: 10; /* Adicionado para garantir que fique acima de tudo */
 }
 
 .closeButton:hover {
@@ -49,13 +50,13 @@
   margin: 0 0 16px 0;
   color: var(--accent);
   font-size: 22px;
-  text-align: justify; /* MODIFICADO: Texto justificado */
+  text-align: center; /* Mantido centralizado */
 }
 
 .modalImage {
   width: 100%;
   max-height: 300px;
-  object-fit: contain; /* MODIFICADO: Evita o corte */
+  object-fit: contain; 
   border-radius: 8px;
   margin-bottom: 16px;
   background: #f0f0f0;
@@ -66,5 +67,5 @@
   color: #333;
   line-height: 1.6;
   margin: 0;
-  text-align: justify; /* Texto justificado (já estava) */
+  text-align: center; /* Mantido centralizado */
 }

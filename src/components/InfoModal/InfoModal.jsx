@@ -35,7 +35,7 @@ export default function InfoModal({ card, onClose }) {
         
         {/* Botão de fechar */}
         <button className={styles.closeButton} onClick={onClose} title="Fechar">
-          &times;
+          
         </button>
         
         {/* Título */}
@@ -46,7 +46,8 @@ export default function InfoModal({ card, onClose }) {
         
         {/* Descrição (frontExtra) - é aqui que ela aparece agora! */}
         <p className={styles.modalDescription}>
-          {card.frontExtra || 'Não há descrição adicional para este item.'}
+          {/* {card.frontExtra || 'Não há descrição adicional para este item.'} */}
+          {card.frontExtra}
         </p>
 
       </div>
