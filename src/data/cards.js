@@ -175,8 +175,7 @@ const CARDS = [
   {
     "id": 27,
     "type": "text",
-    "title": "Ensinos da Roça",
-    "description": "O cultivo de milho, mandioca, batata e banana faz parte da transmissão cultural entre gerações."
+    "title": "Agraicultura Karajá": "O cultivo de milho, mandioca, batata e banana faz parte da transmissão cultural entre gerações."
   },
   {
     "id": 28,
